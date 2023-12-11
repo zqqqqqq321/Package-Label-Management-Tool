@@ -1,17 +1,49 @@
 // 在 pages/CreatePackageLabelPage.tsx
 import React, { useState } from "react";
 
+interface TableRow {
+  id: number;
+  upc: string;
+  sn: string;
+  qty: number;
+  scanTime: string;
+}
+
 const CreatePackageLabelPage: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>("");
-  const [tableData, setTableData] = useState<string[]>([]);
+  const [tableData, setTableData] = useState<TableRow[]>([]);
   const [showQtyInput, setShowQtyInput] = useState<boolean>(false);
   const [qtyValue, setQtyValue] = useState<number>();
   const [showSNInput, setShowSNInput] = useState<boolean>(false);
   const [snValue, setSnValue] = useState<number>();
+  const mockTableData = [
+    {
+      id: 1,
+      upc: "123456789012",
+      sn: "SN0001",
+      qty: 10,
+      scanTime: "2023-04-01 10:00:00",
+    },
+    {
+      id: 2,
+      upc: "987654321098",
+      sn: "SN0002",
+      qty: 15,
+      scanTime: "2023-04-01 10:15:00",
+    },
+    {
+      id: 3,
+      upc: "456789123456",
+      sn: "SN0003",
+      qty: 5,
+      scanTime: "2023-04-01 10:30:00",
+    },
+    // 更多行数据...
+  ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
-    setTableData((prevData) => [...prevData, inputValue]);
+    //setTableData((prevData) => [...prevData, inputValue]);
 
     // Update showQtyInput based on the condition
     if (e.target.value === "1") {
@@ -92,46 +124,26 @@ const CreatePackageLabelPage: React.FC = () => {
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Data</th>
+            <th scope="col">UPC</th>
+            <th scope="col">SN</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Scan Time</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
-          {tableData.map((data, index) => (
-            <tr key={index}>
-              <th scope="row">{index + 1}</th>
-              <td>{data}</td>
+          {tableData.map((row) => (
+            <tr key={row.id}>
+              <th scope="row">{row.id}</th>
+              <td>{row.upc}</td>
+              <td>{row.sn}</td>
+              <td>{row.qty}</td>
+              <td>{row.scanTime}</td>
+              <td>
+                <button className="btn btn-danger">Delete</button>
+              </td>
             </tr>
           ))}
-        </tbody>
-      </table>
-
-      <table className="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <th scope="row">3</th>
-            <th scope="row">3</th>
-          </tr>
         </tbody>
       </table>
     </div>
