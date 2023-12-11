@@ -1,0 +1,106 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.home-title {
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+
+.home-body {
+  margin: 2vw;
+}
+
+.home-button {
+  background-color: #44afdd; /* 按钮背景颜色 */
+  color: white; /* 字体颜色 */
+  border: none !important; /* 无边框 */
+
+  padding: 1.5vw 3vw; /* 内边距 */
+  font-size: 1.2vw; /* 字体大小 */
+  margin: 1.5vw; /* 外边距 */
+  transition-duration: 0.8s !important; /* 过渡动画持续时间 */
+  cursor: pointer; /* 鼠标指针变为手形 */
+  border-radius: 8px; /* 边框圆角 */
+  height: 5vw;
+  width: 20vw;
+}
+
+.home-button:hover {
+  background-color: #9e9e9e !important; /* 鼠标悬停时的背景颜色 */
+  color: white; /* 鼠标悬停时的字体颜色 */
+}
+
+.create-page-container{
+  margin-top: 6vw;
+  margin-bottom: 10vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  
+}
+.upc-input-container{
+  margin-right: 2vw;
+}
+.create-page-form-label{
+  margin-right: 1vw;
+  font-weight: bolder;
+}
+.upc-qty-save-container {
+  display: flex;
+}
+.upc-qty-input-container{
+  width: 60%; /* 占容器的60% */
+  display: flex;
+  align-items: center;
+  margin-left: 4vw;
+}
+
+.save-button-container{
+  display: flex;
+  width: 25%; /* 让容器的宽度等于父容器的宽度 */
+  align-items: center ; /* 让按钮与输入框垂直居中 */
+  margin-right: 5vw;
+}
+
+.bootstrap-save-button {
+ flex: 1; /* 让按钮的宽度等于容器宽度 */
+ height: 100%; /* 让按钮的高度等于容器的高度 */
+ display: flex !important;
+ align-items: center !important;
+ justify-content: center !important;
+}
