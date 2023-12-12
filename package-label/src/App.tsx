@@ -11,6 +11,7 @@ import CreatePackageLabelPage from "./pages/CreatePackageLabelPage"; // 引入�
 import HomeNavigateButton from "./components/HomeNavigateButton"; // 引入 NavigateButton 组件
 import SearchPackageandReprintPage from "./pages/SearchPackageandReprintPage";
 import PackageHistoryandReprintPage from "./pages/PackageHistoryandReprintPage";
+import PackageDetailPage from "./pages/PackageDetailPage";
 
 function App() {
   return (
@@ -80,6 +81,10 @@ function AppContent() {
           <Route
             path="/Package-History-and-Reprint"
             element={<PackageHistoryandReprintPage />}
+          />
+          <Route
+            path="/package-details/:packageid"
+            element={<PackageDetailPage />}
           />
         </Routes>
       </div>

@@ -66,17 +66,16 @@
   color: white; /* 鼠标悬停时的字体颜色 */
 }
 
-.create-page-container{
+.create-page-container {
   margin-top: 2vw;
   margin-bottom: 10vw;
   margin-left: 15vw;
   margin-right: 15vw;
-  
 }
-.upc-input-container{
+.upc-input-container {
   margin-right: 2vw;
 }
-.create-page-form-label{
+.create-page-form-label {
   margin-right: 1vw;
   font-weight: bolder;
 }
@@ -84,65 +83,92 @@
   display: flex;
   margin-bottom: 3vw;
 }
-.upc-qty-input-container{
+.upc-qty-input-container {
   width: 60%; /* 占容器的60% */
   display: flex;
   align-items: center;
+  margin-left: 3vw;
+}
+
+.save-button-container {
+  display: flex;
+  width: 25%; /* 让容器的宽度等于父容器的宽度 */
+  align-items: center; /* 让按钮与输入框垂直居中 */
   margin-left: 4vw;
 }
 
-.save-button-container{
-  display: flex;
-  width: 25%; /* 让容器的宽度等于父容器的宽度 */
-  align-items: center ; /* 让按钮与输入框垂直居中 */
-  margin-right: 5vw;
-}
-
 .bootstrap-save-button {
- flex: 0.7; /* 让按钮的宽度等于容器宽度 */
- height: 90%; /* 让按钮的高度等于容器的高度 */
- display: flex !important;
- align-items: center !important;
- justify-content: center !important;
+  flex: 0.7; /* 让按钮的宽度等于容器宽度 */
+  height: 90%; /* 让按钮的高度等于容器的高度 */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
-.create-page-table{
-  margin-top: 3vw;
+.create-page-table {
+  margin-top: 1vw;
 }
 
-.system-logout{
+.system-logout {
   margin-left: 15vw;
   margin-right: 15vw;
   display: flex;
-  justify-content: flex-end ;
-  align-items: center ;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .search-page-input-container {
   display: flex;
   margin-bottom: 3vw;
 }
-.search-input-container{
-  width: 70%; 
+.search-input-container {
+  width: 70%;
   display: flex;
   align-items: center;
   margin-right: 3vw;
 }
 
-.search-page-input{
-  width: 100% ;
+.search-page-input {
+  width: 100%;
 }
 
-.search-button-container{
+.search-button-container {
   display: flex;
   width: 30%; /* 让容器的宽度等于父容器的宽度 */
-  align-items: center ; /* 让按钮与输入框垂直居中 */
+  align-items: center; /* 让按钮与输入框垂直居中 */
 }
 
-.bootstrap-search-button{
+.bootstrap-search-button {
   flex: 1; /* 让按钮的宽度等于容器宽度 */
   height: 90%; /* 让按钮的高度等于容器的高度 */
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+}
+
+.package-detail-page-input-container {
+  margin-top: 3vw;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.unpack-button-container {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+.bootstrap-Unpack-button {
+  /* flex: 1; 让按钮的宽度等于容器宽度 */
+  /* height: 80%; 让按钮的高度等于容器的高度 */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.history-search-input-container {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 55vw;
 }

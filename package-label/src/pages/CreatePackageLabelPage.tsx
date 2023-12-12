@@ -17,30 +17,7 @@ const CreatePackageLabelPage: React.FC = () => {
   const [qtyValue, setQtyValue] = useState<number>(0);
   const [showSNInput, setShowSNInput] = useState<boolean>(false);
   const [snValue, setSnValue] = useState<string>();
-  const mockTableData = [
-    {
-      id: 1,
-      upc: "123456789012",
-      sn: "SN0001",
-      qty: 10,
-      scanTime: "2023-04-01 10:00:00",
-    },
-    {
-      id: 2,
-      upc: "987654321098",
-      sn: "SN0002",
-      qty: 15,
-      scanTime: "2023-04-01 10:15:00",
-    },
-    {
-      id: 3,
-      upc: "456789123456",
-      sn: "SN0003",
-      qty: 5,
-      scanTime: "2023-04-01 10:30:00",
-    },
-    // 更多行数据...
-  ];
+  
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
@@ -242,7 +219,7 @@ const CreatePackageLabelPage: React.FC = () => {
               type="button"
               className="btn btn-primary btn-lg bootstrap-save-button"
             >
-              Save
+              Create Package
             </button>
           </div>
         </div>
