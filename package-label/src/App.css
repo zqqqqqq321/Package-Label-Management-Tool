@@ -39,7 +39,7 @@
 
 .home-title {
   margin-top: 5vw;
-  margin-bottom: 5vw;
+  margin-bottom: 2vw;
 }
 
 .home-body {
@@ -67,7 +67,7 @@
 }
 
 .create-page-container{
-  margin-top: 6vw;
+  margin-top: 2vw;
   margin-bottom: 10vw;
   margin-left: 15vw;
   margin-right: 15vw;
@@ -82,6 +82,7 @@
 }
 .upc-qty-save-container {
   display: flex;
+  margin-bottom: 3vw;
 }
 .upc-qty-input-container{
   width: 60%; /* 占容器的60% */
@@ -98,9 +99,50 @@
 }
 
 .bootstrap-save-button {
- flex: 1; /* 让按钮的宽度等于容器宽度 */
- height: 100%; /* 让按钮的高度等于容器的高度 */
+ flex: 0.7; /* 让按钮的宽度等于容器宽度 */
+ height: 90%; /* 让按钮的高度等于容器的高度 */
  display: flex !important;
  align-items: center !important;
  justify-content: center !important;
+}
+
+.create-page-table{
+  margin-top: 3vw;
+}
+
+.system-logout{
+  margin-left: 15vw;
+  margin-right: 15vw;
+  display: flex;
+  justify-content: flex-end ;
+  align-items: center ;
+}
+
+.search-page-input-container {
+  display: flex;
+  margin-bottom: 3vw;
+}
+.search-input-container{
+  width: 70%; 
+  display: flex;
+  align-items: center;
+  margin-right: 3vw;
+}
+
+.search-page-input{
+  width: 100% ;
+}
+
+.search-button-container{
+  display: flex;
+  width: 30%; /* 让容器的宽度等于父容器的宽度 */
+  align-items: center ; /* 让按钮与输入框垂直居中 */
+}
+
+.bootstrap-search-button{
+  flex: 1; /* 让按钮的宽度等于容器宽度 */
+  height: 90%; /* 让按钮的高度等于容器的高度 */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
