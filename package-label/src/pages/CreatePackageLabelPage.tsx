@@ -16,13 +16,15 @@ const CreatePackageLabelPage: React.FC = () => {
   const [showQtyInput, setShowQtyInput] = useState<boolean>(false);
   const [qtyValue, setQtyValue] = useState<number>(0);
   const [showSNInput, setShowSNInput] = useState<boolean>(false);
+  const [showTable, setShowTable] = useState<boolean>(false);
   const [snValue, setSnValue] = useState<string>();
-  
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
     setSnValue("");
     setQtyValue(0);
+    setShowTable(false);
+    setTableData([]);
 
     // Update showQtyInput based on the condition
     if (e.target.value === "197528937267") {
@@ -43,8 +45,9 @@ const CreatePackageLabelPage: React.FC = () => {
   };
 
   const handleQtyChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setQtyValue(e.target.valueAsNumber);
     setSnValue("");
+    setTableData([]);
+    setQtyValue(e.target.valueAsNumber);
   };
 
   const handleDeleteRow = (index: number) => {
@@ -88,6 +91,8 @@ const CreatePackageLabelPage: React.FC = () => {
 
         setTableData((prevData) => [...prevData, newTableRow]);
       }
+
+      setShowTable(true);
     }
   };
 
@@ -224,39 +229,41 @@ const CreatePackageLabelPage: React.FC = () => {
           </div>
         </div>
 
-        <table className="table create-page-table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">UPC</th>
-              <th scope="col">SN</th>
-              <th scope="col">Qty</th>
-              <th scope="col">Scan Time</th>
-              <th scope="col">Create User</th>
-              <th scope="col">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {tableData.map((row, index) => (
-              <tr key={index}>
-                <td>{index + 1}</td>
-                <td>{row.upc}</td>
-                <td>{row.sn}</td>
-                <td>{row.qty}</td>
-                <td>{row.scanTime}</td>
-                <td>{row.createUser}</td>
-                <td>
-                  <button
-                    className="btn btn-danger"
-                    onClick={() => handleDeleteRow(index)}
-                  >
-                    Delete
-                  </button>
-                </td>
+        {showTable && (
+          <table className="table create-page-table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">UPC</th>
+                <th scope="col">SN</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Scan Time</th>
+                <th scope="col">Create User</th>
+                <th scope="col">Action</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {tableData.map((row, index) => (
+                <tr key={index}>
+                  <td>{index + 1}</td>
+                  <td>{row.upc}</td>
+                  <td>{row.sn}</td>
+                  <td>{row.qty}</td>
+                  <td>{row.scanTime}</td>
+                  <td>{row.createUser}</td>
+                  <td>
+                    <button
+                      className="btn btn-danger"
+                      onClick={() => handleDeleteRow(index)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
       </div>
     </div>
   );

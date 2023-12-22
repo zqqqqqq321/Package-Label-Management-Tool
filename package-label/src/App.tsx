@@ -30,7 +30,7 @@ function AppContent() {
     <div className="App">
       <div className="main-page">
         <div className="col-12 home-title">
-          <h1>Package Label Management Tool</h1>
+          <h1>Pallet Label Management Tool</h1>
         </div>
 
         {showSystemLogout && (
@@ -52,19 +52,19 @@ function AppContent() {
                 <div>
                   <HomeNavigateButton
                     to="/create-package-label"
-                    label="Create Package Label"
+                    label="Create Pallet Label"
                   />
                 </div>
                 <div>
                   <HomeNavigateButton
                     to="/Search-Package-and-Reprint"
-                    label="Search Package & Reprint"
+                    label="Search Pallet & Reprint"
                   />
                 </div>
                 <div>
                   <HomeNavigateButton
                     to="/Package-History-and-Reprint"
-                    label="Package History & Reprint"
+                    label="Pallet History & Reprint"
                   />
                 </div>
               </div>

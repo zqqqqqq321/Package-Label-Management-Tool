@@ -84,7 +84,7 @@
   margin-bottom: 3vw;
 }
 .upc-qty-input-container {
-  width: 60%; /* 占容器的60% */
+  width: 65%; /* 占容器的60% */
   display: flex;
   align-items: center;
   margin-left: 3vw;
@@ -92,14 +92,16 @@
 
 .save-button-container {
   display: flex;
-  width: 25%; /* 让容器的宽度等于父容器的宽度 */
-  align-items: center; /* 让按钮与输入框垂直居中 */
-  margin-left: 4vw;
+  align-items: center; /* Keep items vertically centered */
+  margin-left: 2vw;
+  padding: 0; /* Ensure there's no padding inside the container */
+  height: 100%; /* You might want to set a specific height here */
 }
 
 .bootstrap-save-button {
-  flex: 0.7; /* 让按钮的宽度等于容器宽度 */
-  height: 90%; /* 让按钮的高度等于容器的高度 */
+  flex-grow: 1; /* This will make the button grow and fill the container */
+  width: 100%; /* Fill the entire width of the container */
+  height: 100%; /* Fill the entire height of the container */
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;

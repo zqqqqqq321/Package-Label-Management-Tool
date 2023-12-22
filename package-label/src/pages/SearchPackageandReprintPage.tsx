@@ -183,7 +183,7 @@ const SearchPackageandReprintPage: React.FC = () => {
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Package ID</th>
+              <th scope="col">Pallet ID</th>
               <th scope="col">UPC</th>
 
               <th scope="col">Qty</th>

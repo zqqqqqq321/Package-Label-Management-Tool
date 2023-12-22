@@ -116,11 +116,22 @@ const PackageDetailPage: React.FC = () => {
       </div>
 
       <div className="create-page-container">
+        <div
+          className="form-outline history-search-input-container"
+          data-mdb-input-init
+        >
+          <input
+            type="text"
+            className="form-control search-page-input"
+            id="form12"
+            placeholder="Search"
+          ></input>
+        </div>
         <table className="table create-page-table">
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Package ID</th>
+              <th scope="col">Pallet ID</th>
               <th scope="col">UPC</th>
               <th scope="col">SN</th>
               <th scope="col">Qty</th>
